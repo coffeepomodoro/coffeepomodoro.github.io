@@ -38,7 +38,7 @@
             overflow-x: hidden;
         }
         
-        /* Navigation */
+        /* Navigation - GÜNCELLENDİ */
         nav {
             position: fixed;
             top: 0;
@@ -76,21 +76,30 @@
             color: #D2691E;
         }
         
-        .nav-links {
+        /* Yeni Sosyal Medya İkonları Alanı */
+        .social-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 1.25rem; /* İkonlar arası boşluk */
             align-items: center;
         }
         
-        .nav-links a {
-            color: #888;
+        .social-links a {
+            color: #ccc; /* Varsayılan renk (biraz gri) */
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: flex;
+            align-items: center;
         }
         
-        .nav-links a:hover {
-            color: #fff;
+        .social-links a:hover {
+            color: #fff; /* Hover rengi (beyaz) */
+            transform: translateY(-2px); /* Hafif yukarı hareket */
+        }
+        
+        .social-links svg {
+            width: 20px; /* İkon boyutu */
+            height: 20px;
+            fill: currentColor; /* Rengi a etiketinden al */
         }
         
         /* Hero Section */
@@ -128,7 +137,7 @@
             line-height: 1.6;
         }
         
-        /* Download Buttons - GÜNCELLENDİ */
+        /* Download Buttons */
         .download-buttons {
             display: flex;
             gap: 1rem;
@@ -140,8 +149,8 @@
         .download-btn {
             display: flex;
             align-items: center;
-            gap: 1rem; /* İkon ile metin arası boşluk biraz arttı */
-            padding: 1.1rem 2.2rem; /* Butonlar yatayda daha genişletildi */
+            gap: 1rem;
+            padding: 1.1rem 2.2rem;
             background: transparent;
             border: 1px solid #fff;
             border-radius: 16px;
@@ -155,11 +164,10 @@
             transform: translateY(-2px);
         }
         
-        /* İkon boyutları büyütüldü */
         .download-btn svg,
         .download-btn .play-icon {
-            width: 48px;
-            height: 48px;
+            width: 34px;
+            height: 34px;
         }
         
         .download-btn .text {
@@ -215,7 +223,7 @@
             z-index: 10;
         }
         
-        /* Ratings Section (Clean Style) */
+        /* Ratings Section */
         .ratings {
             display: flex;
             gap: 5rem;
@@ -281,16 +289,15 @@
             fill: #fff;
         }
 
-        /* Reviews Section (GÜNCELLENDİ - 2x2 Grid ve Ülkeler) */
+        /* Reviews Section */
         .reviews {
             padding: 2rem 2rem 5rem;
-            max-width: 1100px; /* Grid daha derli toplu dursun diye max-width biraz kısıldı */
+            max-width: 1100px;
             margin: 0 auto;
         }
         
         .reviews-grid {
             display: grid;
-            /* Masaüstünde 2 kolonlu yapıya zorluyoruz */
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
@@ -302,7 +309,7 @@
             padding: 2rem;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* İçeriği dikeyde yay */
+            justify-content: space-between;
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
@@ -335,10 +342,9 @@
             font-size: 1rem;
             line-height: 1.6;
             margin-bottom: 1.5rem;
-            flex-grow: 1; /* Metin alanı eslesin */
+            flex-grow: 1;
         }
         
-        /* Yeni Yorum Alt Bilgisi (Ülke ve Yazar) */
         .review-footer {
             display: flex;
             justify-content: space-between;
@@ -466,17 +472,17 @@
         
         /* Responsive Fixes */
         @media (max-width: 900px) {
-             /* Tablet ve altında yorumları tek kolona düşür */
             .reviews-grid {
                 grid-template-columns: 1fr;
-                max-width: 600px; /* Tek kolonda çok yayılmasın */
+                max-width: 600px;
                 margin: 0 auto;
             }
         }
 
         @media (max-width: 768px) {
             nav { padding: 1rem; }
-            .nav-links { display: none; }
+            /* Mobilde ikonları gizlemek istersen bu satırı aktif et: */
+            /* .social-links { display: none; } */
             
             .hero { padding: 6rem 1.5rem 2rem; }
             .hero h1 { font-size: 2.25rem; }
@@ -507,9 +513,19 @@
             <img src="images/playstore.png" alt="CoffeePomodoro">
             <span class="logo-text">Coffee<span>Pomodoro</span></span>
         </a>
-        <div class="nav-links">
-            <a href="#features">Features</a>
-            <a href="mailto:remziakgoz@gmail.com">Contact</a>
+        <div class="social-links">
+            <a href="https://substack.com/@remziakgoz" target="_blank" aria-label="Blog">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/remziakgoz" target="_blank" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+            </a>
+            <a href="https://x.com/remziakgoz_dev" target="_blank" aria-label="X (Twitter)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM367.6 433h39.1L151.1 88h-42L367.6 433z"/></svg>
+            </a>
+            <a href="mailto:coffeepomodoro@proton.me" aria-label="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+            </a>
         </div>
     </nav>
 

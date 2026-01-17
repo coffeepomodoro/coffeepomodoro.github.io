@@ -9,7 +9,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="CoffeePomodoro - Brew Your Productivity">
     <meta property="og:description" content="Transform your focus sessions into a rewarding coffee journey. Track your pomodoros, level up, and stay motivated.">
-    <meta property="og:image" content="https://remziakgoz.github.io/coffeepomodoro.app/images/191_2x_shots_so.png">
+    <meta property="og:image" content="https://remziakgoz.github.io/coffeepomodoro.app/images/2.png">
     <meta property="og:url" content="https://coffeepomodoro.app">
     <meta property="og:type" content="website">
     
@@ -17,7 +17,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CoffeePomodoro - Brew Your Productivity">
     <meta name="twitter:description" content="Transform your focus sessions into a rewarding coffee journey with beautiful coffee-themed animations.">
-    <meta name="twitter:image" content="https://remziakgoz.github.io/coffeepomodoro.app/images/191_2x_shots_so.png">
+    <meta name="twitter:image" content="https://remziakgoz.github.io/coffeepomodoro.app/images/2.png">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/playstore.png">
@@ -178,25 +178,34 @@
             font-weight: 600;
         }
         
-        /* App Mockup */
-        .hero-image {
-            max-width: 1100px;
-            width: 100%;
-            margin-top: 2rem;
-            perspective: 1000px;
+        /* App Mockups Gallery */
+        .mockups-gallery {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            overflow-x: auto;
         }
         
-        .hero-image img {
+        .mockup-item {
+            flex-shrink: 0;
+            width: 180px;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .mockup-item img {
             width: 100%;
             height: auto;
-            border-radius: 20px;
-            transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
-            transform: scale(1);
+            border-radius: 24px;
+            transition: transform 0.3s ease-out;
         }
         
-        .hero-image img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 30px 60px rgba(210, 105, 30, 0.15);
+        .mockup-item:hover {
+            transform: scale(1.08);
+            z-index: 10;
         }
         
         /* Ratings Section */
@@ -238,7 +247,7 @@
         
         .reviews-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
         }
         
@@ -281,38 +290,6 @@
             justify-content: flex-end;
             font-size: 0.85rem;
             color: #666;
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-        
-        .feature-card {
-            background: linear-gradient(135deg, #1a1207 0%, #0d0d0d 100%);
-            border: 1px solid #2a2015;
-            border-radius: 20px;
-            padding: 2rem;
-            overflow: hidden;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .feature-card p {
-            color: #888;
-            font-size: 0.9rem;
         }
         
         /* Features List */
@@ -451,17 +428,32 @@
                 justify-content: center;
             }
             
-            .ratings {
-                gap: 2rem;
+            .mockups-gallery {
+                gap: 0.75rem;
+                padding: 1rem 0.5rem;
             }
             
-            .hero-image img:hover {
-                transform: scale(1.02);
+            .mockup-item {
+                width: 140px;
+            }
+            
+            .mockup-item:hover {
+                transform: scale(1.05);
+            }
+            
+            .ratings {
+                gap: 2rem;
             }
             
             .footer-content {
                 flex-direction: column;
                 text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .mockup-item {
+                width: 120px;
             }
         }
     </style>
@@ -505,8 +497,26 @@
             </a>
         </div>
         
-        <div class="hero-image">
-            <img src="images/191_2x_shots_so.png" alt="CoffeePomodoro App Screenshots">
+        <!-- 6 Mockups Gallery -->
+        <div class="mockups-gallery">
+            <div class="mockup-item">
+                <img src="images/1.png" alt="CoffeePomodoro Screenshot 1">
+            </div>
+            <div class="mockup-item">
+                <img src="images/2.png" alt="CoffeePomodoro Screenshot 2">
+            </div>
+            <div class="mockup-item">
+                <img src="images/3.png" alt="CoffeePomodoro Screenshot 3">
+            </div>
+            <div class="mockup-item">
+                <img src="images/4.png" alt="CoffeePomodoro Screenshot 4">
+            </div>
+            <div class="mockup-item">
+                <img src="images/5.png" alt="CoffeePomodoro Screenshot 5">
+            </div>
+            <div class="mockup-item">
+                <img src="images/6.png" alt="CoffeePomodoro Screenshot 6">
+            </div>
         </div>
     </section>
 
@@ -542,14 +552,6 @@
                 </div>
                 <p class="review-text">I've downloaded countless study timers and pomodoro timers, and this app is the one I'll be sticking with. I love the sleek UI, everything is just great!</p>
                 <div class="review-author">— not2daywawii</div>
-            </div>
-            <div class="review-card">
-                <div class="review-header">
-                    <span class="review-title">Pomoaziz</span>
-                    <span class="review-stars">★★★★★</span>
-                </div>
-                <p class="review-text">The coffee theme makes productivity feel like a game! Love the level system and achievements.</p>
-                <div class="review-author">— murtaza cansiz</div>
             </div>
             <div class="review-card">
                 <div class="review-header">
@@ -649,8 +651,8 @@
                     </svg>
                 </div>
                 <div class="feature-content">
-                    <h4>Live Activities & Dynamic Island</h4>
-                    <p>Track your timer in real-time with Dynamic Island on iOS and Live Activities on both platforms.</p>
+                    <h4>Dynamic Island & Dynamic Cup</h4>
+                    <p>Track your timer in real-time with Dynamic Island on iOS and Dynamic Cup on Android.</p>
                 </div>
             </div>
             <div class="feature-item">

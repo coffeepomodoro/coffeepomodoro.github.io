@@ -602,17 +602,44 @@
             }
             /* -------------------------------- */
             
-            .ratings { flex-direction: column; gap: 2rem; text-align: center; }
-            .rating-block { justify-content: center; }
+/* --- RATINGS (PUANLAR) - YAN YANA DURMASI İÇİN --- */
+            .ratings { 
+                flex-direction: row; /* Yan yana diz */
+                flex-wrap: wrap;     /* Sığmazsa aşağı kaydır */
+                gap: 1.5rem;         /* Aralarındaki boşluk */
+                justify-content: center;
+                margin-top: 1rem;
+            }
             
+            /* Rating bloklarını (ikon+puan) ortala */
+            .rating-block { 
+                justify-content: center;
+                /* Genişlik vererek yan yana sığmalarını garantiye alalım */
+                min-width: 140px; 
+            }
+            
+            /* Metin hizalamalarını mobile göre ortala */
             .rating-block.left .rating-text-group,
             .rating-block.right .rating-text-group {
                 align-items: center;
                 text-align: center;
             }
             
-            .rating-block.left { flex-direction: column-reverse; gap: 0.5rem; }
-            .rating-block.right { flex-direction: column; gap: 0.5rem; }
+            /* Blok içindeki ikon ve yazının yönünü ayarla */
+            .rating-block.left { 
+                flex-direction: row-reverse; /* İkon solda, yazı sağda kalsın diye */
+                gap: 0.5rem; 
+                text-align: left; /* Metni sola hizala */
+            }
+            
+            .rating-block.left .rating-text-group {
+                align-items: flex-start; /* Yazıları sola yasla */
+            }
+
+            .rating-block.right { 
+                flex-direction: row; 
+                gap: 0.5rem; 
+            }
         }
     </style>
 </head>

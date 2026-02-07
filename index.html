@@ -238,35 +238,37 @@
         /* --- İNCE PARILTI EFEKTLERİ (Sadece çerçeve etrafında) --- */
         /* Hover durumunda parıltının artması için :hover img seçicisini kullanıyoruz */
 
-        /* 1. Telefon (Kırmızı/Pembe) */
-        .mockup-item:nth-child(1):hover img {
-            box-shadow: 0 0 20px 2px rgba(215, 114, 109, 0.5);
-        }
+/* 1. Telefon (Kırmızı/Pembe) - Daha canlı bir mercan rengi */
+.mockup-item:nth-child(1):hover img {
+    box-shadow: 0 0 25px 5px rgba(235, 100, 95, 0.6);
+}
 
-        /* 2. Telefon (Yeşil/Teal) */
-        .mockup-item:nth-child(2):hover img {
-            box-shadow: 0 0 20px 2px rgba(118, 163, 160, 0.5);
-        }
+/* 2. Telefon (Yeşil/Teal) - Daha ferah bir nane yeşili */
+.mockup-item:nth-child(2):hover img {
+    box-shadow: 0 0 25px 5px rgba(100, 180, 175, 0.6);
+}
 
-        /* 3. Telefon (Kahverengi) */
-        .mockup-item:nth-child(3):hover img {
-            box-shadow: 0 0 20px 2px rgba(196, 143, 94, 0.5);
-        }
+/* 3. Telefon (Kahverengi/Gold) - Sütlü kahve/Gold ışıltısı */
+.mockup-item:nth-child(3):hover img {
+    box-shadow: 0 0 25px 5px rgba(210, 155, 100, 0.6);
+}
 
-        /* 4. Telefon (Mor) */
-        .mockup-item:nth-child(4):hover img {
-            box-shadow: 0 0 20px 2px rgba(150, 100, 255, 0.5);
-        }
+/* 4. Telefon (Müzik - Mor) - Neon mor/lila (Butonlardaki ışığı yansıtmalı) */
+.mockup-item:nth-child(4):hover img {
+    box-shadow: 0 0 25px 5px rgba(160, 100, 255, 0.65);
+}
 
-        /* 5. Telefon (Koyu Kahve) */
-        .mockup-item:nth-child(5):hover img {
-            box-shadow: 0 0 20px 2px rgba(140, 80, 80, 0.5);
-        }
+/* 5. Telefon (Task - Koyu Kahve) - Çamur gibi durmaması için "Karamel" tonu */
+/* Not: Koyu arka planlı ekranlarda, gölgeyi koyu yapmak yerine 
+   içerikteki vurgu rengini (açık kahve/turuncu) seçmek daha şık durur. */
+.mockup-item:nth-child(5):hover img {
+    box-shadow: 0 0 25px 5px rgba(180, 100, 80, 0.6);
+}
 
-        /* 6. Telefon (Mavi) */
-        .mockup-item:nth-child(6):hover img {
-            box-shadow: 0 0 20px 2px rgba(132, 196, 235, 0.5);
-        }
+/* 6. Telefon (Widget - Mavi) - Tam iOS mavisi */
+.mockup-item:nth-child(6):hover img {
+    box-shadow: 0 0 25px 5px rgba(80, 160, 255, 0.6);
+}
         
         /* Ratings Section */
         .ratings {
